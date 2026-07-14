@@ -117,25 +117,26 @@ public partial class WeaponPaints : BasePlugin, IPluginConfig<WeaponPaintsConfig
 
 	public override void OnAllPluginsLoaded(bool hotReload)
 	{
-		try
-		{
-			MenuApi = MenuCapability.Get();
-			
-			if (Config.Additional.KnifeEnabled)
-				SetupKnifeMenu();
-			if (Config.Additional.SkinEnabled)
-				SetupSkinsMenu();
-			if (Config.Additional.GloveEnabled)
-				SetupGlovesMenu();
-			if (Config.Additional.AgentEnabled)
-				SetupAgentsMenu();
-			if (Config.Additional.MusicEnabled)
-				SetupMusicMenu();
-			if (Config.Additional.PinsEnabled)
-				SetupPinsMenu();
-		
-			RegisterCommands();
-		}
+    if (Config.Additional.KnifeEnabled)
+        SetupKnifeMenu();
+
+    if (Config.Additional.SkinEnabled)
+        SetupSkinsMenu();
+
+    if (Config.Additional.GloveEnabled)
+        SetupGlovesMenu();
+
+    if (Config.Additional.AgentEnabled)
+        SetupAgentsMenu();
+
+    if (Config.Additional.MusicEnabled)
+        SetupMusicMenu();
+
+    if (Config.Additional.PinsEnabled)
+        SetupPinsMenu();
+
+    RegisterCommands();
+	}
 		catch (Exception)
 		{
 			MenuApi = null;
