@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 using CounterStrikeSharp.API;
 using CounterStrikeSharp.API.Core;
@@ -11,6 +12,7 @@ using MySqlConnector;
 namespace WeaponPaints;
 
 [MinimumApiVersion(338)]
+[DebuggerDisplay($"{{{nameof(GetDebuggerDisplay)}(),nq}}")]
 public partial class WeaponPaints : BasePlugin, IPluginConfig<WeaponPaintsConfig>
 {
 	internal static WeaponPaints Instance { get; private set; } = new();
@@ -117,31 +119,6 @@ public partial class WeaponPaints : BasePlugin, IPluginConfig<WeaponPaintsConfig
 
 	public override void OnAllPluginsLoaded(bool hotReload)
 	{
-    if (Config.Additional.KnifeEnabled)
-        SetupKnifeMenu();
-
-    if (Config.Additional.SkinEnabled)
-        SetupSkinsMenu();
-
-    if (Config.Additional.GloveEnabled)
-        SetupGlovesMenu();
-
-    if (Config.Additional.AgentEnabled)
-        SetupAgentsMenu();
-
-    if (Config.Additional.MusicEnabled)
-        SetupMusicMenu();
-
-    if (Config.Additional.PinsEnabled)
-        SetupPinsMenu();
-
     RegisterCommands();
-	}
-		catch (Exception)
-		{
-			MenuApi = null;
-			Logger.LogError("Error while loading required plugins");
-			throw;
-		}
 	}
 }
