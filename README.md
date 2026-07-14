@@ -14,19 +14,11 @@ Unfinished, unoptimized and not fully functional ugly demo weapon paints plugin 
 - Data syncs on player connect
 - Added command **`!wp`** to refresh skins ***(with cooldown in seconds can be configured)***
 - Added command **`!ws`** to show website
-- Added command **`!knife`** to show menu with knives
-- Added command **`!gloves`** to show menu with gloves
-- Added command **`!agents`** to show menu with agents
-- Added command **`!pins`** to show menu with pins
-- Added command **`!music`** to show menu with music
 - Translations support, submit a PR if you want to share your translation
 
 ## ⚙️ Requirements
 **Ensure all the following dependencies are installed before proceeding**
 - [CounterStrikeSharp](https://github.com/roflmuffin/CounterStrikeSharp)
-- [PlayerSettings](https://github.com/NickFox007/PlayerSettingsCS2) - Required by MenuManagerCS2
-- [AnyBaseLibCS2](https://github.com/NickFox007/AnyBaseLibCS2) - Required by PlayerSettings
-- [MenuManagerCS2](https://github.com/NickFox007/MenuManagerCS2)
 - MySQL database
 
 ## CS2 Server
