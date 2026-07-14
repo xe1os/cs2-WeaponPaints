@@ -1,4 +1,3 @@
-using System.Diagnostics;
 using System.Runtime.InteropServices;
 using CounterStrikeSharp.API;
 using CounterStrikeSharp.API.Core;
@@ -12,7 +11,7 @@ using MySqlConnector;
 namespace WeaponPaints;
 
 [MinimumApiVersion(338)]
-[DebuggerDisplay($"{{{nameof(GetDebuggerDisplay)}(),nq}}")]
+
 public partial class WeaponPaints : BasePlugin, IPluginConfig<WeaponPaintsConfig>
 {
 	internal static WeaponPaints Instance { get; private set; } = new();
