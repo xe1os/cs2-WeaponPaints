@@ -61,49 +61,15 @@ public partial class WeaponPaints
 	}
 
 	private void OnCommandWS(CCSPlayerController? player, CommandInfo command)
-	{
-		if (!Config.Additional.SkinEnabled) return;
-		if (!Utility.IsPlayerValid(player)) return;
+{
+    if (!Config.Additional.SkinEnabled) return;
+    if (!Utility.IsPlayerValid(player)) return;
 
-		if (!string.IsNullOrEmpty(Localizer["wp_info_website"]))
-		{
-			player!.Print(Localizer["wp_info_website", Config.Website]);
-		}
-		if (!string.IsNullOrEmpty(Localizer["wp_info_refresh"]))
-		{
-			player!.Print(Localizer["wp_info_refresh"]);
-		}
-
-		if (Config.Additional.GloveEnabled)
-			if (!string.IsNullOrEmpty(Localizer["wp_info_glove"]))
-			{
-				player!.Print(Localizer["wp_info_glove"]);
-			}
-
-		if (Config.Additional.AgentEnabled)
-			if (!string.IsNullOrEmpty(Localizer["wp_info_agent"]))
-			{
-				player!.Print(Localizer["wp_info_agent"]);
-			}
-
-		if (Config.Additional.MusicEnabled)
-			if (!string.IsNullOrEmpty(Localizer["wp_info_music"]))
-			{
-				player!.Print(Localizer["wp_info_music"]);
-			}
-		
-		if (Config.Additional.PinsEnabled)
-			if (!string.IsNullOrEmpty(Localizer["wp_info_pin"]))
-			{
-				player!.Print(Localizer["wp_info_pin"]);
-			}
-
-		if (!Config.Additional.KnifeEnabled) return;
-		if (!string.IsNullOrEmpty(Localizer["wp_info_knife"]))
-		{
-			player!.Print(Localizer["wp_info_knife"]);
-		}
-	}
+    if (!string.IsNullOrEmpty(Localizer["wp_info_website"]))
+    {
+        player!.Print(Localizer["wp_info_website", Config.Website]);
+    }
+}
 
 	private void RegisterCommands()
 	{
