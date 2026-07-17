@@ -61,15 +61,19 @@ public partial class WeaponPaints
 	}
 
 	private void OnCommandWS(CCSPlayerController? player, CommandInfo command)
-{
-    if (!Config.Additional.SkinEnabled) return;
-    if (!Utility.IsPlayerValid(player)) return;
+	{
+		if (!Config.Additional.SkinEnabled) return;
+		if (!Utility.IsPlayerValid(player)) return;
 
-    if (!string.IsNullOrEmpty(Localizer["wp_info_website"]))
-    {
-        player!.Print(Localizer["wp_info_website", Config.Website]);
-    }
-}
+		if (!string.IsNullOrEmpty(Localizer["wp_info_website"]))
+		{
+			player!.Print(Localizer["wp_info_website", Config.Website]);
+		}
+		if (!string.IsNullOrEmpty(Localizer["wp_info_refresh"]))
+		{
+			player!.Print(Localizer["wp_info_refresh"]);
+		}
+	}
 
 	private void RegisterCommands()
 	{
